@@ -1,0 +1,34 @@
+{
+    "name": "rST",
+    "displayName": "reStructuredText Syntax Highlighting",
+    "description": "Provides syntax highlighting for reStructuredText",
+    "version": "1.0.0",
+    "publisher": "jtanx",
+    "author": "Jeremy Tan",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jtanx/rST.git"
+    },
+    "bugs": "https://github.com/jtanx/rST/issues",
+    "homepage": "https://github.com/jtanx/rST",
+    "engines": {
+        "vscode": "^1.41.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "restructuredtext",
+            "aliases": ["reStructuredText", "restructuredtext"],
+            "extensions": [".rst",".rest"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "restructuredtext",
+            "scopeName": "text.restructuredtext",
+            "path": "./syntaxes/restructuredtext.tmLanguage"
+        }]
+    }
+}
