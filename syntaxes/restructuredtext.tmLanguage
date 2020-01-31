@@ -120,7 +120,7 @@ SOFTWARE.
 					<key>end</key>
 					<string>``((?=[^`\w\d])|$)</string>
 					<key>name</key>
-					<string>markup.raw.restructuredtext</string>
+					<string>string.unquoted.restructuredtext</string>
 				</dict>
 				<dict>
 					<key>captures</key>
@@ -181,7 +181,7 @@ SOFTWARE.
 						<key>2</key>
 						<dict>
 							<key>name</key>
-							<string>entity.name.role.restructuredtext</string>
+							<string>constant.language.role.restructuredtext</string>
 						</dict>
 						<key>3</key>
 						<dict>
@@ -390,7 +390,7 @@ SOFTWARE.
 						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.directive.restructuredtext</string>
+							<string>constant.language.directive.restructuredtext</string>
 						</dict>
 						<key>3</key>
 						<dict>
@@ -410,7 +410,7 @@ SOFTWARE.
 						<key>6</key>
 						<dict>
 							<key>name</key>
-							<string>support.directive.restructuredtext</string>
+							<string>entity.name.tag.restructuredtext</string>
 						</dict>
 						<key>7</key>
 						<dict>
@@ -420,7 +420,7 @@ SOFTWARE.
 						<key>8</key>
 						<dict>
 							<key>name</key>
-							<string>entity.name.directive.restructuredtext</string>
+							<string>entity.name.type.restructuredtext</string>
 						</dict>
 						<key>10</key>
 						<dict>
@@ -792,7 +792,7 @@ SOFTWARE.
 			<array>
 				<dict>
 					<key>begin</key>
-					<string>(::)$</string>
+					<string>^(\s*).*(::)$</string>
 					<key>beginCaptures</key>
 					<dict>
 						<key>1</key>
@@ -804,9 +804,9 @@ SOFTWARE.
 					<key>comment</key>
 					<string>Literal Blocks</string>
 					<key>contentName</key>
-					<string>meta.raw.block.restructuredtext</string>
+					<string>string.unquoted.restructuredtext</string>
 					<key>end</key>
-					<string>^(?=\S)</string>
+					<string>^(?!\1\s+)(?!\s*$)</string>
 					<key>patterns</key>
 					<array>
 						<dict>
@@ -825,7 +825,7 @@ SOFTWARE.
 					<key>match</key>
 					<string>.+</string>
 					<key>name</key>
-					<string>markup.raw.inner.restructuredtext</string>
+					<string>string.unquoted.inner.restructuredtext</string>
 				</dict>
 			</array>
 		</dict>
